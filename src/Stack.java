@@ -34,7 +34,7 @@ public class Stack {
             this.size--; // decrease the size of the stack
             return currentHead.value;
         }
-        return -1;
+        return INVALID_VALUE;
     }
 
     // returns the value of the stack's head (null if empty)
@@ -42,7 +42,7 @@ public class Stack {
         if(this.size != 0) {
             return this.head.value;
         }
-        return -1;
+        return INVALID_VALUE;
     }
 
     // returns the size of the stack
