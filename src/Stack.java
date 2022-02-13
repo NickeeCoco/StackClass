@@ -1,7 +1,4 @@
 public class Stack {
-    // we define the max value as an invalid value
-    // if we only expected positive values, we would have put -1
-    int INVALID_VALUE = Integer.MAX_VALUE;
 
     // linked list node class
     private class Node {
@@ -26,7 +23,7 @@ public class Stack {
     }
 
     // removes the head value of the stack
-    public int pop() {
+    public Integer pop() {
         if(this.size != 0) {
             Node currentHead = this.head; // keep track of the head node before removing it
             this.head = this.head.nextNode;
@@ -34,15 +31,15 @@ public class Stack {
             this.size--; // decrease the size of the stack
             return currentHead.value;
         }
-        return INVALID_VALUE;
+        return null;
     }
 
     // returns the value of the stack's head (null if empty)
-    public int top() {
+    public Integer top() {
         if(this.size != 0) {
             return this.head.value;
         }
-        return INVALID_VALUE;
+        return null;
     }
 
     // returns the size of the stack
